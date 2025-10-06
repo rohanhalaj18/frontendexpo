@@ -5,10 +5,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const confirmPhone = document.getElementById("confirmPhone");
   const orderNumber = document.getElementById("orderNumber");
   const countdownEl = document.getElementById("countdown");
-
+  const subtotalEl = document.getElementById("subtotal");
+  const totalEl = document.getElementById("total");
+  subtotalEl.textContent = new URLSearchParams(window.location.search).get(
+    "price"
+  );
+  totalEl.textContent = new URLSearchParams(window.location.search).get(
+    "price"
+  );
   placeOrderBtn.addEventListener("click", async (e) => {
     e.preventDefault();
-
+    
     // Collect form data
     const formData = {
       firstName: document.getElementById("firstName").value.trim(),
@@ -19,7 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
       email: document.getElementById("email").value.trim(),
       school: document.getElementById("school").value.trim(),
       notes: document.getElementById("notes").value.trim(),
+      orderName: new URLSearchParams(window.location.search).get("product"),
+      orderPrice: new URLSearchParams(window.location.search).get("price"),
+      orderDetails: "Product order from website",
     };
+
 
     // Quick validation
     if (
@@ -78,5 +89,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function redirectToHome() {
-  window.location.href = "../pages/main.html"; // redirect to homepage
+  window.location.href = "../pages/index.html"; // redirect to homepage
 }
