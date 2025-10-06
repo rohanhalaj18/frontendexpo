@@ -89,5 +89,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function redirectToHome() {
-  window.location.href = "../pages/index.html"; // redirect to homepage
+  window.location.href = "./index.html"; // redirect to homepage
 }

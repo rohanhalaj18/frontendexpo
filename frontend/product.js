@@ -107,7 +107,7 @@ function initCartFunctionality() {
 
         setTimeout(() => {
           // Redirect to checkout page with product data
-          window.location.href = `../pages/order.html?product=${encodeURIComponent(
+          window.location.href = `./order.html?product=${encodeURIComponent(
             product
           )}&price=${price}`;
         }, 1000);
