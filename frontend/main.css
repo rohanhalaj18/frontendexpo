@@ -478,12 +478,12 @@
 
         /* Dark theme */
         [data-theme="dark"] {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: #ecf0f1;
+            background: rgba(255, 255, 255, 0.15);
+            color: #000;
         }
 
         [data-theme="dark"] .header {
-            background: rgba(44, 62, 80, 0.95);
+            background: rgba(12, 13, 14, 0.95);
             border-bottom-color: rgba(255, 255, 255, 0.1);
         }
 
@@ -505,5 +505,11 @@
         }
 
         [data-theme="dark"] .hero h1 {
-            color: #ecf0f1;
+            color: #0f0f0f;
+        }
+        [data-theme="dark"] .stat-label,.stat-number {
+            color: #0f0f0f;
+        }
+        [data-theme="dark"] .hero-description {
+            color: #2c3e50;
         }

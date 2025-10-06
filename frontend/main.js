@@ -6,7 +6,7 @@ function initThemeToggle() {
   if (!themeToggle) return;
 
   const body = document.body;
-  let isDark = localStorage.getItem("theme") === "dark";
+  let isDark = localStorage.getItem("theme") === "light";
 
   const applyTheme = () => {
     body.setAttribute("data-theme", isDark ? "dark" : "light");
