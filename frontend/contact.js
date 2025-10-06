@@ -74,7 +74,7 @@ function initCart() {
 
     try {
       const response = await fetch(
-        "https://expotech1-3.onrender.com/messages/enquiry",
+        "https://expotech1-7.onrender.com/messages/enquiry",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

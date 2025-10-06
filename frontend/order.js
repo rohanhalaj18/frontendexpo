@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const response = await fetch(
-        "https://expotech1-3.onrender.com/Orders/placeorder",
+        "https://expotech1-7.onrender.com/Orders/placeorder",
         {
           method: "POST",
           headers: {
