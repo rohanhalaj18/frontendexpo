@@ -348,6 +348,133 @@
                 gap: 2rem;
             }
         }
+        .footer {
+  background-color: var(--footer-bg, #1a1a1a);
+  color: var(--footer-text, #ffffff);
+  padding: 60px 20px 20px;
+  margin-top: 80px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-column h3, .footer-column h4 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.footer-description {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: var(--primary-color, #cdcfd2);
+  transform: translateY(-3px);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-contact {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-contact li {
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-contact i {
+  color: var(--primary-color, #007bff);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.watermark {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.watermark .fa-heart {
+  color: #e74c3c;
+  animation: heartbeat 1.5s ease infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
         /* Dark theme */
         [data-theme="dark"] {
