@@ -36,8 +36,8 @@
             align-items: center;
             gap: 0.5rem;
             font-size: 1.5rem;
-            font-weight: bold;
-            color: #2c3e50;
+            font-weight: 800;
+            color: #fbfcfd;
             text-decoration: none;
         }
 
@@ -477,6 +477,10 @@
 
             .hours-grid {
                 grid-template-columns: 1fr;
+            }
+            .logo{
+                font-size: 1.5rem;
+                font-weight: 600;
             }
         }
 

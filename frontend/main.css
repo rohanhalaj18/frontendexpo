@@ -35,8 +35,8 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 2rem;
+            font-weight: 800;
             color: rgba(255, 255, 255, 0.975);
             text-decoration: none;
         }
@@ -473,6 +473,10 @@
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+  }
+  .logo{
+    font-size: 1.5rem;
+    font-weight: 600;
   }
 }
 
