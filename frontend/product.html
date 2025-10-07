@@ -2,39 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     <title>product</title>
     <link rel="stylesheet" href="./product.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header class="header">
-        <nav class="nav-container">
-            <a href="#" class="logo">
-                <div class="logo-icon">
-                    <img src="./logo_transparent.png" alt="Logo" style="height: 100px" />
-                </div>
-                EXPLOROTECH
-            </a>
-    
-            <ul class="nav-links">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./product.html">Kit</a></li>
-                <li><a href="./About.html">About</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-    
-            <div class="nav-right">
-                <button class="theme-toggle" id="themeToggle">
-                    <i class="fas fa-sun"></i>
-                </button>
-                <button class="cart-icon cart-badge">
-                    <i class="fas fa-shopping-cart"></i>
-                </button>
-            </div>
-        </nav>
-    </header>
-    
+  <nav class="nav-container">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <img src="./logo_transparent.png" alt="Logo" style="height: 100px" />
+      </div>
+      EXPLOROTECH
+    </a>
+
+    <!-- ✅ Added id="navLinks" here -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./product.html">Kit</a></li>
+      <li><a href="./About.html">About</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-sun"></i>
+      </button>
+      <!-- Hamburger Menu -->
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+</header>
     <main class="main-container">
         <!-- Hero Section -->
         <section class="components-hero">
@@ -594,6 +595,40 @@
     </main>
     <script src="./product.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    
+    <script>
+  // =======================
+  // MENU TOGGLE FUNCTIONALITY
+  // =======================
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+
+    const icon = menuToggle.querySelector("i");
+    if (menuToggle.classList.contains("active")) {
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-times");
+      document.body.style.overflow = "hidden"; // Prevent scroll when sidebar open
+    } else {
+      icon.classList.remove("fa-times");
+      icon.classList.add("fa-bars");
+      document.body.style.overflow = "auto";
+    }
+  });
+
+  // Optional: close sidebar when clicking a link
+  document.querySelectorAll("#navLinks a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      menuToggle.classList.remove("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.add("fa-bars");
+      icon.classList.remove("fa-times");
+      document.body.style.overflow = "auto";
+    });
+  });
+</script>
 </body>
 </html>
