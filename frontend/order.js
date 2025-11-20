@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "price"
   );
   
-  totalEl.textContent = subtotalEl.textContent * 1 + 51 * 1;
+  totalEl.textContent = subtotalEl.textContent * 1 + 0 * 1;
   placeOrderBtn.addEventListener("click", async (e) => {
     e.preventDefault();
     
