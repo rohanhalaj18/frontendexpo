@@ -7,12 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const countdownEl = document.getElementById("countdown");
   const subtotalEl = document.getElementById("subtotal");
   const totalEl = document.getElementById("total");
+  const convince = document.getElementById("Convince").value;
   subtotalEl.textContent = new URLSearchParams(window.location.search).get(
     "price"
   );
-  totalEl.textContent = new URLSearchParams(window.location.search).get(
-    "price"
-  );
+  
+  totalEl.textContent = subtotalEl.textContent * 1 + 51 * 1;
   placeOrderBtn.addEventListener("click", async (e) => {
     e.preventDefault();
     
